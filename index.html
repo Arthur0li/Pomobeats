@@ -8,27 +8,110 @@
 <body>
     <div class="app">
         <header class="topbar">
-
+            <img src="" alt="pomotify icon">
+            <h1>Pomotify</h1>
+            <p>focus, connect, make it happen.</p>
         </header>
 
         <main class="content">
             <section class="pomodoro">
-                <div class="time-card">
-                    
+                <div class="timer-cards">
+                    <div class="timer-card timer-card--focus">
+                        <div class="mode-name">
+                            <img src="" alt="focus-icon">
+                            <p>Focus</p>
+                        </div>
+                        <div class="timer">
+                            <time datetime="PT25M">25:00</time>
+                        </div>
+                        <div class="phrase">
+                        <p>Keep the focus!</p>
+                        </div>
+                        <img src="" alt="pomotify-icon">
+
+                        <div class="time-card-button"> 
+                            <button>Start</button>
+                            <button>Jump</button>
+                        </div>
+                    </div>
+
+                    <div class="timer-card timer-card--short">
+                        <div class="mode-name">
+                            <img src="" alt="pause-icon">
+                            <p>Short pause</p>
+                        </div>
+                        <div class="timer">
+                            <time datetime="PT25M">05:00</time>
+                        </div>
+                        <div class="phrase">
+                        <p>Rest a little...</p>
+                        </div>
+                        <img src="" alt="pomotify-icon">
+
+                        <div class="time-card-button"> 
+                            <button>Start</button>
+                            <button>Jump</button>
+                        </div>
+                    </div>
+
+                    <div class="timer-card timer-card--long">
+                        <div class="mode-name">
+                            <img src="" alt="long-pause-icon">
+                            <p>Long Pause</p>
+                        </div>
+                        <div class="timer">
+                            <time datetime="PT25M">15:00</time>
+                        </div>
+                        <div class="phrase">
+                        <p>Rest a little longer...</p>
+                        </div>
+                        <img src="" alt="pomotify-icon">
+
+                        <div class="timer-card-button"> 
+                            <button>Start</button>
+                            <button>Jump</button>
+                        </div>
+                    </div>
+                    <div class="cycles">
+                        <p>By default, Pomotify works with: <br><br>
+                            Pomodoro for 25 minutes <br> 
+                            Short break for 5 minutes <br>
+                            Long break for 15 minutes <br>
+                            with the long break appearing after 4 Pomodoros <br><br>
+                            But below you have the option to choose!</p>
+                        
+                        <p>time (minutes)</p>
+                        
+                        <label for="pomodoro-time">Pomodoro</label>
+                        <input id="pomodoro-time" type="number">
+
+                        <label for="short-time">Short Break</label>
+                        <input id="short-time" type="number">
+
+                        <label for="long-time">Long break</label>
+                        <input id="long-time" type="number">
+
+                        <label for="long-interval">Long break interval</label>
+                        <input id="long-interval" type="number">
+                    </div>
                 </div>
 
-                <div class="time-mode">
-                    
+                <div class="timer-mode">
+                    <button type="button">Focus 25 min</button>
+                    <button type="button">Short pause 5min</button>
+                    <button type="button">Long pause 15min</button>
+                    <button type="button">Cycles</button>
                 </div>
             </section>
 
             <aside class="sidebar">
-
+                <img src="" alt="spotify_icon">
+                <p>Your playlist</p>
             </aside>
         </main>
         
-        <footer class="final_phrase">
-
+        <footer class="final-phrase">
+            <p>Small goals, big achievements.</p>
         </footer>
     </div>
 </body>
