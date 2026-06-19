@@ -1,0 +1,30 @@
+body{
+    background-color: #243F36;
+}
+
+.app{
+    background-color: #152A22;
+}
+
+h1{
+    color: rgb(243, 249, 239);
+}
+.header-text{
+    color: #67C275;
+}
+
+.pomodoro{
+    background-color: #1a492f;
+}
+
+.timer-mode{
+    background-color: #276a45;
+}
+
+.sidebar{
+    background-color: #0F1A18;
+}
+
+.final-phrase{
+    background-color: #16422a;
+}
