@@ -4,6 +4,12 @@ body{
 
 .app{
     background-color: #152A22;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 3%;
+    padding: 23px;
 }
 
 h1{
@@ -15,16 +21,31 @@ h1{
 
 .pomodoro{
     background-color: #1a492f;
+    border-radius: 3%;
+    border-style: solid;
+    border-color: #459451;
+    border-width: 3px;
 }
 
 .timer-mode{
     background-color: #276a45;
+    border-radius: 3%;
+    padding: 5px;
+    border-style: solid;
+    border-color: #459451;
+    border-width: 3px;
 }
 
 .sidebar{
     background-color: #0F1A18;
+    border-radius: 3%;
+    border-style: solid;
+    border-color: #459451;
+    border-width: 3px;
 }
 
 .final-phrase{
-    background-color: #16422a;
+    background-color: #08351c;
+    border-radius: 3%;
+    text-align: center;
 }
