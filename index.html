@@ -1,119 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pomotify</title>
-    <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/style.css">
+
+    <link rel="icon" href="src/img/tomato.png" />
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <div class="app">
         <header class="topbar">
-            <img src="" alt="pomotify icon">
-            <h1>Pomotify</h1>
-            <p class="header-text">focus, connect, make it happen.</p>
+            <div class="brand">
+                <img src="src/img/tomato.png" alt="Ícone do Pomotify" class="brand__icon" />
+                <div class="brand__text">
+                    <h1>Pomotify</h1>
+                    <p>foque. conecte. faça acontecer.</p>
+                </div>
+            </div>
+
+            <div class="topbar__spacer"></div>
         </header>
 
         <main class="content">
-            <section class="pomodoro">
-                <div class="timer-cards">
-                    <div class="timer-card timer-card--focus">
-                        <div class="mode-name">
-                            <img src="" alt="focus-icon">
-                            <p>Focus</p>
-                        </div>
-                        <div class="timer">
-                            <time datetime="PT25M">25:00</time>
-                        </div>
-                        <div class="phrase">
-                        <p>Keep the focus!</p>
-                        </div>
-                        <img src="" alt="pomotify-icon">
-
-                        <div class="time-card-button"> 
-                            <button>Start</button>
-                            <button>Jump</button>
-                        </div>
+            <section class="pomodoro-panel">
+                <div class="timer-card timer-card--focus">
+                    <div class="mode-pill">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <span>Foco</span>
                     </div>
 
-                    <div class="timer-card timer-card--short">
-                        <div class="mode-name">
-                            <img src="" alt="pause-icon">
-                            <p>Short pause</p>
-                        </div>
-                        <div class="timer">
-                            <time datetime="PT25M">05:00</time>
-                        </div>
-                        <div class="phrase">
-                        <p>Rest a little...</p>
-                        </div>
-                        <img src="" alt="pomotify-icon">
+                    <div class="timer-block">
+                        <time datetime="PT25M">25:00</time>
+                        <p class="timer-message">Mantenha o foco!</p>
 
-                        <div class="time-card-button"> 
-                            <button>Start</button>
-                            <button>Jump</button>
-                        </div>
-                    </div>
+                        <img src="src/img/tomato.png" alt="Tomate do Pomodoro" class="timer-tomato" />
 
-                    <div class="timer-card timer-card--long">
-                        <div class="mode-name">
-                            <img src="" alt="long-pause-icon">
-                            <p>Long Pause</p>
-                        </div>
-                        <div class="timer">
-                            <time datetime="PT25M">15:00</time>
-                        </div>
-                        <div class="phrase">
-                        <p>Rest a little longer...</p>
-                        </div>
-                        <img src="" alt="pomotify-icon">
+                        <div class="timer-actions">
+                            <button class="action-btn action-btn--start" type="button">
+                                <i class="fa-solid fa-play"></i>
+                                Iniciar
+                            </button>
 
-                        <div class="timer-card-button"> 
-                            <button>Start</button>
-                            <button>Jump</button>
+                            <button class="action-btn action-btn--skip" type="button">
+                                <i class="fa-solid fa-forward-step"></i>
+                                Pular
+                            </button>
                         </div>
-                    </div>
-                    <div class="cycles">
-                        <p>By default, Pomotify works with: <br><br>
-                            Pomodoro for 25 minutes <br> 
-                            Short break for 5 minutes <br>
-                            Long break for 15 minutes <br>
-                            with the long break appearing after 4 Pomodoros <br><br>
-                            But below you have the option to choose!</p>
-                        
-                        <p>time (minutes)</p>
-                        
-                        <label for="pomodoro-time">Pomodoro</label>
-                        <input id="pomodoro-time" type="number">
-
-                        <label for="short-time">Short Break</label>
-                        <input id="short-time" type="number">
-
-                        <label for="long-time">Long break</label>
-                        <input id="long-time" type="number">
-
-                        <label for="long-interval">Long break interval</label>
-                        <input id="long-interval" type="number">
                     </div>
                 </div>
 
-                <div class="timer-mode">
-                    <button type="button">Focus 25 min</button>
-                    <button type="button">Short pause 5min</button>
-                    <button type="button">Long pause 15min</button>
-                    <button type="button">Cycles</button>
+                <div class="timers-bar">
+                    <article class="mini-card mini-card--active">
+                        <div class="mini-card__icon">
+                            <img src="src/img/tomato.png" alt="" aria-hidden="true">
+                        </div>
+                        <div class="mini-card__text">
+                            <strong>Foco</strong>
+                            <span>25 min</span>
+                        </div>
+                    </article>
+
+                    <article class="mini-card">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <div class="mini-card__text">
+                            <strong>Pausa curta</strong>
+                            <span>5 min</span>
+                        </div>
+                    </article>
+
+                    <article class="mini-card">
+                        <i class="fa-solid fa-couch"></i>
+                        <div class="mini-card__text">
+                            <strong>Pausa longa</strong>
+                            <span>15 min</span>
+                        </div>
+                    </article>
+
+                    <article class="mini-card">
+                        <i class="fa-solid fa-rotate"></i>
+                        <div class="mini-card__text">
+                            <strong>Ciclos</strong>
+                            <span>4 ciclos</span>
+                        </div>
+                    </article>
                 </div>
             </section>
 
             <aside class="sidebar">
-                <img src="" alt="spotify_icon">
-                <p>Your playlist</p>
+                <div class="sidebar__header">
+                    <div class="sidebar__title">
+                        <i class="fa-brands fa-spotify"></i>
+                        <h2>Sua playlist</h2>
+                    </div>
+
+                    <button class="icon-btn" type="button" aria-label="Atualizar playlist">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </button>
+                </div>
+
+                <section class="playlist-card">
+                    <img src="src/img/spotify.png" alt="Capa da playlist" class="playlist-card__cover" />
+
+                    <div class="playlist-card__info">
+                        <h3>Lofi Beats</h3>
+                        <p>Playlist · 60 músicas</p>
+
+                        <button class="playlist-btn" type="button">
+                            <i class="fa-solid fa-repeat"></i>
+                            Trocar playlist
+                        </button>
+                    </div>
+                </section>
+
+                <ul class="track-list">
+                    <li class="track-list__item track-list__item--active">
+                        <div class="track-list__left">
+                            <i class="fa-solid fa-equalizer"></i>
+                            <div>
+                                <strong>morning coffee</strong>
+                                <span>Lofi Girl</span>
+                            </div>
+                        </div>
+                        <span class="track-list__time">2:25</span>
+                    </li>
+
+                    <li class="track-list__item">
+                        <div class="track-list__left">
+                            <i class="fa-solid fa-music"></i>
+                            <div>
+                                <strong>chill day</strong>
+                                <span>Lofi Girl</span>
+                            </div>
+                        </div>
+                        <span class="track-list__time">2:12</span>
+                    </li>
+
+                    <li class="track-list__item">
+                        <div class="track-list__left">
+                            <i class="fa-solid fa-music"></i>
+                            <div>
+                                <strong>blush</strong>
+                                <span>Lofi Girl</span>
+                            </div>
+                        </div>
+                        <span class="track-list__time">2:31</span>
+                    </li>
+
+                    <li class="track-list__item">
+                        <div class="track-list__left">
+                            <i class="fa-solid fa-music"></i>
+                            <div>
+                                <strong>twilight</strong>
+                                <span>Lofi Girl</span>
+                            </div>
+                        </div>
+                        <span class="track-list__time">2:18</span>
+                    </li>
+
+                    <li class="track-list__item">
+                        <div class="track-list__left">
+                            <i class="fa-solid fa-music"></i>
+                            <div>
+                                <strong>dreamy</strong>
+                                <span>Lofi Girl</span>
+                            </div>
+                        </div>
+                        <span class="track-list__time">2:41</span>
+                    </li>
+                </ul>
+
+                <div class="player-bar">
+                    <div class="player-bar__track">
+                        <img src="src/img/spotify.png" alt="" aria-hidden="true" class="player-bar__cover" />
+                        <div>
+                            <strong>morning coffee</strong>
+                            <span>Lofi Girl</span>
+                        </div>
+                    </div>
+
+                    <div class="player-bar__controls">
+                        <button class="icon-btn" type="button" aria-label="Anterior">
+                            <i class="fa-solid fa-backward-step"></i>
+                        </button>
+                        <button class="play-btn" type="button" aria-label="Pausar">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                        <button class="icon-btn" type="button" aria-label="Próxima">
+                            <i class="fa-solid fa-forward-step"></i>
+                        </button>
+                    </div>
+                </div>
             </aside>
         </main>
-        
+
         <footer class="final-phrase">
-            <p>Small goals, big achievements.</p>
+            <i class="fa-solid fa-seedling"></i>
+            <p>Pequenos focos, grandes conquistas.</p>
         </footer>
     </div>
 </body>
