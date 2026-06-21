@@ -126,10 +126,11 @@ body {
         radial-gradient(circle at 10% 95%, rgba(255, 255, 255, 0.04), transparent 22%),
         radial-gradient(circle at 92% 45%, rgba(98, 211, 126, 0.09), transparent 18%),
         linear-gradient(180deg, rgba(27, 76, 54, 0.96), rgba(16, 43, 30, 0.98));
-    padding: 30px 26px;
+    padding: 90px 26px 30px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .timer-card::before,
@@ -181,6 +182,7 @@ body {
     text-align: center;
     max-width: 560px;
     width: 100%;
+    margin-top: 10px;
 }
 
 .timer-block time {

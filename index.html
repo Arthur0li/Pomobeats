@@ -20,72 +20,181 @@
                     <p>focus. connect. make it happen.</p>
                 </div>
             </div>
-
-            <div class="topbar__spacer"></div>
         </header>
 
         <main class="content">
             <section class="pomodoro-panel">
-                <div class="timer-card timer-card--focus">
-                    <div class="mode-pill">
-                        <i class="fa-solid fa-bullseye"></i>
-                        <span>Focus</span>
-                    </div>
-
-                    <div class="timer-block">
-                        <time datetime="PT25M">25:00</time>
-                        <p class="timer-message">Keep your focus!</p>
-
-                        <img src="src/img/tomato.png" alt="Pomodoro tomato" class="timer-tomato" />
-
-                        <div class="timer-actions">
-                            <button class="action-btn action-btn--start" type="button">
-                                <i class="fa-solid fa-play"></i>
-                                Start
-                            </button>
-
-                            <button class="action-btn action-btn--skip" type="button">
-                                <i class="fa-solid fa-forward-step"></i>
-                                Skip
-                            </button>
+                <div class="screen-stack">
+                    <section class="timer-card screen screen--focus is-active" data-screen="focus">
+                        <div class="mode-pill">
+                            <i class="fa-solid fa-bullseye"></i>
+                            <span>Focus</span>
                         </div>
-                    </div>
+
+                        <div class="timer-block">
+                            <time datetime="PT25M">25:00</time>
+                            <p class="timer-message">Keep your focus!</p>
+
+                            <img src="src/img/tomato.png" alt="Pomodoro tomato" class="timer-tomato" />
+
+                            <div class="timer-actions">
+                            <button id="start-button" class="action-btn action-btn--start" type="button">
+                                <i class="fa-solid fa-play"></i>
+                                <span>Start</span>
+                            </button>                                
+
+                                <button class="action-btn action-btn--skip" type="button">
+                                    <i class="fa-solid fa-forward-step"></i>
+                                    Skip
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="timer-card screen screen--short-break" data-screen="short-break">
+                        <div class="mode-pill">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <span>Short break</span>
+                        </div>
+
+                        <div class="timer-block">
+                            <time datetime="PT5M">05:00</time>
+                            <p class="timer-message">Take a short break.</p>
+
+                            <img src="src/img/tomato.png" alt="Pomodoro tomato" class="timer-tomato" />
+
+                            <div class="timer-actions">
+                                <button class="action-btn action-btn--start" type="button">
+                                    <i class="fa-solid fa-play"></i>
+                                    Start
+                                </button>
+
+                                <button class="action-btn action-btn--skip" type="button">
+                                    <i class="fa-solid fa-forward-step"></i>
+                                    Skip
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="timer-card screen screen--long-break" data-screen="long-break">
+                        <div class="mode-pill">
+                            <i class="fa-solid fa-couch"></i>
+                            <span>Long break</span>
+                        </div>
+
+                        <div class="timer-block">
+                            <time datetime="PT15M">15:00</time>
+                            <p class="timer-message">Relax a little longer.</p>
+
+                            <img src="src/img/tomato.png" alt="Pomodoro tomato" class="timer-tomato" />
+
+                            <div class="timer-actions">
+                                <button class="action-btn action-btn--start" type="button">
+                                    <i class="fa-solid fa-play"></i>
+                                    Start
+                                </button>
+
+                                <button class="action-btn action-btn--skip" type="button">
+                                    <i class="fa-solid fa-forward-step"></i>
+                                    Skip
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="timer-card screen screen--cycles" data-screen="cycles">
+                        <div class="mode-pill">
+                            <i class="fa-solid fa-rotate"></i>
+                            <span>Cycles</span>
+                        </div>
+
+                        <div class="timer-block timer-block--cycles">
+                            <div class="cycles-info">
+                                <p>
+                                    By default, Pomotify works with:
+                                </p>
+                                <ul>
+                                    <li>Pomodoro: 25 minutes</li>
+                                    <li>Short break: 5 minutes</li>
+                                    <li>Long break: 15 minutes</li>
+                                    <li>Long break appears after 4 Pomodoros</li>
+                                </ul>
+                            </div>
+
+                            <div class="cycles-settings">
+                                <p class="cycles-title">Time settings (minutes)</p>
+
+                                <div class="time-inputs">
+                                    <div class="time-field">
+                                        <label for="pomodoro-time">Pomodoro</label>
+                                        <input id="pomodoro-time" type="number" value="25" min="1">
+                                    </div>
+
+                                    <div class="time-field">
+                                        <label for="short-time">Short Break</label>
+                                        <input id="short-time" type="number" value="5" min="1">
+                                    </div>
+
+                                    <div class="time-field">
+                                        <label for="long-time">Long Break</label>
+                                        <input id="long-time" type="number" value="15" min="1">
+                                    </div>
+
+                                    <div class="time-field">
+                                        <label for="long-interval">Interval</label>
+                                        <input id="long-interval" type="number" value="4" min="1">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timer-actions">
+                                <button class="action-btn action-btn--start" type="button">
+                                    <i class="fa-solid fa-check"></i>
+                                    Save
+                                </button>
+
+                                <button class="action-btn action-btn--skip" type="button">
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+                    </section>
                 </div>
 
                 <div class="timers-bar">
-                    <article class="mini-card mini-card--active">
-                        <div class="mini-card__icon">
-                            <img src="src/img/tomato.png" alt="" aria-hidden="true">
-                        </div>
+                    <button class="mini-card mini-card--active" type="button" data-target="focus">
+                        <i class="fa-solid fa-bullseye"></i>
                         <div class="mini-card__text">
                             <strong>Focus</strong>
                             <span>25 min</span>
                         </div>
-                    </article>
+                    </button>
 
-                    <article class="mini-card">
+                    <button class="mini-card" type="button" data-target="short-break">
                         <i class="fa-solid fa-mug-hot"></i>
                         <div class="mini-card__text">
                             <strong>Short break</strong>
                             <span>5 min</span>
                         </div>
-                    </article>
+                    </button>
 
-                    <article class="mini-card">
+                    <button class="mini-card" type="button" data-target="long-break">
                         <i class="fa-solid fa-couch"></i>
                         <div class="mini-card__text">
                             <strong>Long break</strong>
                             <span>15 min</span>
                         </div>
-                    </article>
+                    </button>
 
-                    <article class="mini-card">
+                    <button class="mini-card" type="button" data-target="cycles">
                         <i class="fa-solid fa-rotate"></i>
                         <div class="mini-card__text">
                             <strong>Cycles</strong>
                             <span>4 cycles</span>
                         </div>
-                    </article>
+                    </button>
                 </div>
             </section>
 
