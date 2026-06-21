@@ -605,3 +605,11 @@ body {
         width: 100%;
     }
 }
+
+.screen {
+    display: none;
+}
+
+.screen.is-active {
+    display: flex;
+}
