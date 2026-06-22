@@ -712,3 +712,20 @@ body {
 .screen.is-active {
     display: flex;
 }
+
+.playlist-select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(10, 20, 15, 0.6);
+  color: var(--text);
+  outline: none;
+}
+
+.spotify-status {
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 8px 2px 0;
+}

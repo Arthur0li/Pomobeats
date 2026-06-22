@@ -198,92 +198,55 @@
                 </div>
             </section>
 
-            <aside class="sidebar">
+           <aside class="sidebar">
                 <div class="sidebar__header">
                     <div class="sidebar__title">
                         <i class="fa-brands fa-spotify"></i>
-                        <h2>Your playlist</h2>
+                        <h2>Spotify</h2>
                     </div>
 
-                    <button class="icon-btn" type="button" aria-label="Refresh playlist">
-                        <i class="fa-solid fa-arrows-rotate"></i>
+                    <button
+                        id="spotify-connect"
+                        class="icon-btn"
+                        type="button"
+                        aria-label="Conectar Spotify"
+                        >
+                        <i class="fa-solid fa-right-to-bracket"></i>
                     </button>
                 </div>
 
                 <section class="playlist-card">
-                    <img src="src/img/spotify.png" alt="Playlist cover" class="playlist-card__cover" />
+                    <img
+                        id="playlist-cover"
+                        src="src/img/spotify.png"
+                        alt="Capa da playlist"
+                        class="playlist-card__cover"
+                    />
 
                     <div class="playlist-card__info">
-                        <h3>Lofi Beats</h3>
-                        <p>Playlist · 60 songs</p>
+                        <h3 id="playlist-name">Nenhuma playlist selecionada</h3>
+                        <p id="playlist-meta">Conecte sua conta para escolher uma playlist</p>
 
-                        <button class="playlist-btn" type="button">
-                            <i class="fa-solid fa-repeat"></i>
-                            Change playlist
-                        </button>
+                        <select id="playlist-select" class="playlist-select" disabled>
+                            <option value="">Selecione uma playlist</option>
+                        </select>
                     </div>
                 </section>
 
-                <ul class="track-list">
-                    <li class="track-list__item track-list__item--active">
-                        <div class="track-list__left">
-                            <i class="fa-solid fa-equalizer"></i>
-                            <div>
-                                <strong>morning coffee</strong>
-                                <span>Lofi Girl</span>
-                            </div>
-                        </div>
-                        <span class="track-list__time">2:25</span>
-                    </li>
+                <div id="spotify-status" class="spotify-status">
+                    Desconectado
+                </div>
 
-                    <li class="track-list__item">
-                        <div class="track-list__left">
-                            <i class="fa-solid fa-music"></i>
-                            <div>
-                                <strong>chill day</strong>
-                                <span>Lofi Girl</span>
-                            </div>
-                        </div>
-                        <span class="track-list__time">2:12</span>
-                    </li>
-
-                    <li class="track-list__item">
-                        <div class="track-list__left">
-                            <i class="fa-solid fa-music"></i>
-                            <div>
-                                <strong>blush</strong>
-                                <span>Lofi Girl</span>
-                            </div>
-                        </div>
-                        <span class="track-list__time">2:31</span>
-                    </li>
-
-                    <li class="track-list__item">
-                        <div class="track-list__left">
-                            <i class="fa-solid fa-music"></i>
-                            <div>
-                                <strong>twilight</strong>
-                                <span>Lofi Girl</span>
-                            </div>
-                        </div>
-                        <span class="track-list__time">2:18</span>
-                    </li>
-
-                    <li class="track-list__item">
-                        <div class="track-list__left">
-                            <i class="fa-solid fa-music"></i>
-                            <div>
-                                <strong>dreamy</strong>
-                                <span>Lofi Girl</span>
-                            </div>
-                        </div>
-                        <span class="track-list__time">2:41</span>
-                    </li>
-                </ul>
+                <ul id="playlist-tracks" class="track-list"></ul>
 
                 <div class="player-bar">
                     <div class="player-bar__track">
-                        <img src="src/img/spotify.png" alt="" aria-hidden="true" class="player-bar__cover" />
+                        <img
+                            src="src/img/spotify.png"
+                            alt=""
+                            aria-hidden="true"
+                            class="player-bar__cover"
+                        />
                         <div>
                             <strong>morning coffee</strong>
                             <span>Lofi Girl</span>
@@ -311,5 +274,6 @@
         </footer>
     </div>
     <script src="src/js/script.js"></script>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
 </body>
 </html>
