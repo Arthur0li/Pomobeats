@@ -108,8 +108,8 @@ body {
     padding: 18px;
     display: grid;
     grid-template-rows: 1fr auto;
-    gap: 12px;
-    min-height: 0;
+    gap: 15px;;
+    max-height: 620px;
 }
 
 /* ====================
@@ -712,6 +712,7 @@ body {
 
 .screen-stack {
     flex: 0;
+    max-height: 0%;
 }
 
 .screen.is-active {
