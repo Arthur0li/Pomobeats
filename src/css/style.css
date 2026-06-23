@@ -107,9 +107,9 @@ body {
 .pomodoro-panel {
     padding: 18px;
     display: grid;
-    grid-template-rows: 1fr auto;
-    gap: 15px;;
-    max-height: 1000px;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 15px;
+    min-height: 0;
 }
 
 /* ====================
@@ -709,11 +709,12 @@ body {
 
 .screen {
     display: none;
+    height: 100%;
 }
 
 .screen-stack {
-    flex: 0;
-    max-height: 0%;
+    min-height: 0;
+    display: grid;
 }
 
 .screen.is-active {
