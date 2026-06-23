@@ -199,73 +199,45 @@
             </section>
 
            <aside class="sidebar">
-                <div class="sidebar__header">
-                    <div class="sidebar__title">
-                        <i class="fa-brands fa-spotify"></i>
-                        <h2>Spotify</h2>
-                    </div>
 
-                    <button
-                        id="spotify-connect"
-                        class="icon-btn"
-                        type="button"
-                        aria-label="Conectar Spotify"
-                        >
-                        <i class="fa-solid fa-right-to-bracket"></i>
-                    </button>
-                </div>
+    <div class="sidebar__title">
+        <i class="fa-brands fa-spotify"></i>
+        <h2>Playlist</h2>
+    </div>
 
-                <section class="playlist-card">
-                    <img
-                        id="playlist-cover"
-                        src="src/img/spotify.png"
-                        alt="Capa da playlist"
-                        class="playlist-card__cover"
-                    />
+    <div class="playlist-form">
 
-                    <div class="playlist-card__info">
-                        <h3 id="playlist-name">Nenhuma playlist selecionada</h3>
-                        <p id="playlist-meta">Conecte sua conta para escolher uma playlist</p>
+        <label for="playlist-url">
+            Spotify Playlist URL
+        </label>
 
-                        <select id="playlist-select" class="playlist-select" disabled>
-                            <option value="">Selecione uma playlist</option>
-                        </select>
-                    </div>
-                </section>
+        <input
+            id="playlist-url"
+            type="text"
+            placeholder="Paste playlist URL..."
+        >
 
-                <div id="spotify-status" class="spotify-status">
-                    Desconectado
-                </div>
+        <button
+            id="load-playlist"
+            class="action-btn action-btn--start"
+        >
+            Load Playlist
+        </button>
 
-                <ul id="playlist-tracks" class="track-list"></ul>
+    </div>
 
-                <div class="player-bar">
-                    <div class="player-bar__track">
-                        <img
-                            src="src/img/spotify.png"
-                            alt=""
-                            aria-hidden="true"
-                            class="player-bar__cover"
-                        />
-                        <div>
-                            <strong>morning coffee</strong>
-                            <span>Lofi Girl</span>
-                        </div>
-                    </div>
+    <iframe
+        id="spotify-embed"
+        src=""
+        width="100%"
+        height="500"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        style="border:none;border-radius:16px;"
+    >
+    </iframe>
 
-                    <div class="player-bar__controls">
-                        <button class="icon-btn" type="button" aria-label="Previous track">
-                            <i class="fa-solid fa-backward-step"></i>
-                        </button>
-                        <button class="play-btn" type="button" aria-label="Pause">
-                            <i class="fa-solid fa-pause"></i>
-                        </button>
-                        <button class="icon-btn" type="button" aria-label="Next track">
-                            <i class="fa-solid fa-forward-step"></i>
-                        </button>
-                    </div>
-                </div>
-            </aside>
+</aside>
         </main>
 
         <footer class="final-phrase">
@@ -274,6 +246,5 @@
         </footer>
     </div>
     <script src="src/js/script.js"></script>
-    <script src="https://sdk.scdn.co/spotify-player.js"></script>
 </body>
 </html>

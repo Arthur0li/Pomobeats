@@ -107,7 +107,8 @@ body {
 .pomodoro-panel {
     padding: 18px;
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr auto;
+    gap: 12px;
     min-height: 0;
 }
 
@@ -124,7 +125,7 @@ body {
         radial-gradient(circle at 10% 95%, rgba(255, 255, 255, 0.04), transparent 22%),
         radial-gradient(circle at 92% 45%, rgba(98, 211, 126, 0.09), transparent 18%),
         linear-gradient(180deg, rgba(27, 76, 54, 0.96), rgba(16, 43, 30, 0.98));
-    padding: 90px 26px 30px;
+    padding: 70px 26px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -709,6 +710,10 @@ body {
     display: none;
 }
 
+.screen-stack {
+    flex: 0;
+}
+
 .screen.is-active {
     display: flex;
 }
@@ -728,4 +733,32 @@ body {
   font-size: 0.9rem;
   color: var(--muted);
   padding: 8px 2px 0;
+}
+
+.playlist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.playlist-form label {
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.playlist-form input {
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.08);
+    background: rgba(10,20,15,.6);
+    color: var(--text);
+}
+
+.playlist-form input:focus {
+    outline: none;
+    border-color: var(--green);
+}
+
+#spotify-embed {
+    background: rgba(255,255,255,.03);
 }

@@ -393,4 +393,58 @@ document.addEventListener("DOMContentLoaded", () => {
   showScreen("focus");
   resetMode("focus");
   updateStartButtons();
+
+  const playlistInput =
+  document.getElementById("playlist-url");
+
+const loadPlaylistButton =
+  document.getElementById("load-playlist");
+
+const spotifyEmbed =
+  document.getElementById("spotify-embed");
+
+function loadPlaylist(url) {
+
+  if (!url.includes("playlist")) {
+    alert("Invalid Spotify playlist.");
+    return;
+  }
+
+  const playlistId = url
+    .split("/playlist/")[1]
+    ?.split("?")[0];
+
+  if (!playlistId) {
+    alert("Could not find playlist ID.");
+    return;
+  }
+
+  spotifyEmbed.src =
+    `https://open.spotify.com/embed/playlist/${playlistId}`;
+
+  localStorage.setItem(
+    "pomobeats_playlist",
+    url
+  );
+}
+
+loadPlaylistButton?.addEventListener(
+  "click",
+  () => {
+    loadPlaylist(playlistInput.value);
+  }
+);
+
+const savedPlaylist =
+  localStorage.getItem(
+    "pomobeats_playlist"
+  );
+
+if (savedPlaylist) {
+
+  playlistInput.value =
+    savedPlaylist;
+
+  loadPlaylist(savedPlaylist);
+}
 });
