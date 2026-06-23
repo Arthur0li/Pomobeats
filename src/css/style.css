@@ -125,7 +125,7 @@ body {
         radial-gradient(circle at 10% 95%, rgba(255, 255, 255, 0.04), transparent 22%),
         radial-gradient(circle at 92% 45%, rgba(98, 211, 126, 0.09), transparent 18%),
         linear-gradient(180deg, rgba(27, 76, 54, 0.96), rgba(16, 43, 30, 0.98));
-    padding: 70px 26px 20px;
+        padding: 70px 26px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,7 +181,6 @@ body {
     text-align: center;
     max-width: 560px;
     width: 100%;
-    margin-top: 10px;
 }
 
 .timer-block time {
@@ -259,6 +258,18 @@ body {
     padding: 14px;
 }
 
+.screen--focus,
+.screen--short-break,
+.screen--long-break {
+    padding-top: 130px;
+}
+
+.screen--focus .mode-pill,
+.screen--short-break .mode-pill,
+.screen--long-break .mode-pill {
+    top: 70px;
+}
+
 /* ====================
    TIMER MODES
 ==================== */
@@ -330,7 +341,7 @@ body {
     backdrop-filter: blur(8px);
     max-width: 320px;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 23px;
 }
 
 .cycles-info p {
