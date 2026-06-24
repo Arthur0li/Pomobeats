@@ -229,14 +229,6 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 }
 
-.action-btn:hover,
-.button-mode:hover,
-.play-btn:hover,
-.icon-btn:hover,
-.playlist-btn:hover {
-    transform: translateY(-1px);
-}
-
 .action-btn--start {
     background: linear-gradient(180deg, #66d57f, #40bf74);
     box-shadow: 0 12px 24px rgba(64, 191, 116, 0.2);
