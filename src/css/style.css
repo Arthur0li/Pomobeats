@@ -22,7 +22,6 @@
 ==================== */
 
 body {
-    min-height: 100vh;
     font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background:
         radial-gradient(circle at 15% 20%, rgba(110, 188, 133, 0.26), transparent 18%),
@@ -431,7 +430,7 @@ body {
 .sidebar {
     padding: 18px;
     display: grid;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto auto 1fr;
     gap: 16px;
     min-height: 0;
 }
@@ -454,186 +453,6 @@ body {
 .sidebar__title i {
     color: #1ed760;
     font-size: 1.4rem;
-}
-
-.icon-btn,
-.play-btn {
-    border: none;
-    cursor: pointer;
-    color: var(--text);
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.icon-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: transparent;
-    color: rgba(255, 255, 255, 0.82);
-    display: grid;
-    place-items: center;
-    font-size: 1rem;
-}
-
-.playlist-card {
-    display: grid;
-    grid-template-columns: 96px 1fr;
-    gap: 16px;
-    padding: 10px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.02);
-    align-items: center;
-}
-
-.playlist-card__cover {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 14px;
-    object-fit: cover;
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
-}
-
-.playlist-card__info h3 {
-    font-size: 1.2rem;
-    margin-bottom: 6px;
-}
-
-.playlist-card__info p {
-    color: var(--muted);
-    margin-bottom: 14px;
-    font-size: 0.95rem;
-}
-
-.playlist-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid var(--line-strong);
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.03);
-    padding: 11px 16px;
-    color: var(--text);
-    font-weight: 700;
-}
-
-.track-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    min-height: 0;
-    overflow: auto;
-    padding-right: 6px;
-}
-
-.track-list__item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 12px 14px;
-    border-radius: 14px;
-    background: transparent;
-    color: var(--text);
-}
-
-.track-list__item--active {
-    background: rgba(31, 65, 46, 0.88);
-    box-shadow: inset 0 0 0 1px rgba(130, 224, 151, 0.08);
-}
-
-.track-list__left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    min-width: 0;
-}
-
-.track-list__left i {
-    width: 18px;
-    color: rgba(255, 255, 255, 0.72);
-}
-
-.track-list__left div {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-}
-
-.track-list__left strong {
-    font-size: 0.98rem;
-    line-height: 1.15;
-}
-
-.track-list__left span {
-    color: var(--muted);
-    font-size: 0.9rem;
-    margin-top: 4px;
-}
-
-.track-list__time {
-    color: var(--green);
-    font-size: 0.95rem;
-    white-space: nowrap;
-}
-
-/* ====================
-   PLAYER
-==================== */
-
-.player-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding-top: 8px;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.player-bar__track {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    min-width: 0;
-}
-
-.player-bar__cover {
-    width: 48px;
-    height: 48px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.player-bar__track div {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-}
-
-.player-bar__track strong {
-    font-size: 0.96rem;
-}
-
-.player-bar__track span {
-    font-size: 0.9rem;
-    color: var(--muted);
-    margin-top: 4px;
-}
-
-.player-bar__controls {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.play-btn {
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    background: linear-gradient(180deg, #66d57f, #42c275);
-    display: grid;
-    place-items: center;
-    font-size: 1.15rem;
-    box-shadow: 0 14px 26px rgba(66, 194, 117, 0.24);
 }
 
 /* ====================
@@ -712,10 +531,6 @@ body {
         width: 100%;
         justify-content: space-between;
     }
-
-    .action-btn {
-        width: 100%;
-    }
 }
 
 .screen {
@@ -730,23 +545,6 @@ body {
 
 .screen.is-active {
     display: flex;
-}
-
-.playlist-select {
-  width: 100%;
-  margin-top: 6px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(10, 20, 15, 0.6);
-  color: var(--text);
-  outline: none;
-}
-
-.spotify-status {
-  font-size: 0.9rem;
-  color: var(--muted);
-  padding: 8px 2px 0;
 }
 
 .playlist-form {
