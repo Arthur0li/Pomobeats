@@ -16,7 +16,7 @@ The goal of this project is to provide a simple yet effective tool that combines
 
 Try Pomobeats directly in your browser:
 
-🔗 
+🔗 https://arthur0li.github.io/Pomobeats/
 
 No installation required — simply open the application and start focusing.
 
