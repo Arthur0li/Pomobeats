@@ -35,9 +35,9 @@ No installation required — simply open the application and start focusing.
 
 ## 📸 Preview
 
-```md
-
-```
+![Pomobeats Preview](src/images/print1.png)
+![Pomobeats Second Preview](src/images/print2.png)
+![Pomobeats Third Preview](src/images/print3.png)
 
 ---
 
@@ -113,8 +113,8 @@ Developed by **Arthur Oliveira**.
 
 📫 Connect with me:
 
-- 💼 LinkedIn: 
-- 🐙 GitHub: 
+- 💼 LinkedIn: https://www.linkedin.com/in/arthur-oliveira-21ab8a236/?locale=en
+- 🐙 GitHub: https://github.com/Arthur0li
 
 ---
 
