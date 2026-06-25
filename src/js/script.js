@@ -4,6 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const startButtons = document.querySelectorAll(
     '.screen:not([data-screen="cycles"]) .action-btn--start'
   );
+  const alarmSound = new Audio("src/music/alarm.mp3");
+  alarmSound.preload = "auto";
+
+  function playAlarm() {
+    alarmSound.currentTime = 0;
+    alarmSound.play().catch(() => {
+      console.log("Não foi possível tocar o alarme.");
+    });
+  }
   const skipButtons = document.querySelectorAll(
     '.screen:not([data-screen="cycles"]) .action-btn--skip'
   );
@@ -278,6 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const finishedMode = currentMode;
         stopTimer();
+        playAlarm();
 
         showNotification(finishedMode);
 
